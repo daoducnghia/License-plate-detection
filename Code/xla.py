@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import pytesseract
 from PIL import Image
 
-img_ori = cv2.imread('input/demo.jpg')
+img_ori = cv2.imread('input/demo1.jpg')
 #print("Kich co anh:", img_ori.shape)
 
 #Chuyển thành ảnh xám
@@ -42,8 +42,8 @@ cv2.drawContours(img_ori, [largest_rectangle[1]], 0, (0,255,0), 8)
 #Cắt khung biển số xe
 crop = img_ori[y:y+h, x:x+w]
 #Hiển thị ảnh khung biển số xe
-cv2.imshow("Khung bien so", crop)
-cv2.waitKey()
+# cv2.imshow("Khung bien so", crop)
+# cv2.waitKey()
 
 pytesseract.pytesseract.tesseract_cmd = r"C:\\Program Files\\Tesseract-OCR\\tesseract.exe"
 
